@@ -1,0 +1,50 @@
+{
+  "name": "your-project-name",
+  "version": "0.1.0",
+  "author": "johndoe <john@example.com>",
+  "description": "project description",
+  "keywords": [
+    "react"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/johndoe.git"
+  },
+  "bugs": {
+    "url": "https://example.com/johndoe/issues"
+  },
+  "homepage": "https://example.com/johndoe",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": ">=0.12.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "case-sensitive-paths-webpack-plugin": "^1.1.4",
+    "react": "^15.4.2",
+    "react-dev-utils": "^0.4.2",
+    "react-dom": "^15.4.2",
+    "styled-jsx": "^0.4.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.config.dev.js --no-info --open --client-log-level none --content-base example --inline --hot --compress",
+    "build": "npm run build:example && npm run build:dist",
+    "build:example": "webpack --config webpack.config.dev.js",
+    "build:dist": "webpack --config webpack.config.dist.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "plugins": [
+      "styled-jsx/babel"
+    ]
+  }
+}
